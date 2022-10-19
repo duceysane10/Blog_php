@@ -1,3 +1,4 @@
+<script src="http://cdn.ckeditor.com/4.6.2/full-all/ckeditor.js"></script>
 <style>
 .btn-file {
     position: relative;
@@ -33,7 +34,7 @@ input[readonly] {
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <form method="post" role="form" action="test2.php">
+      <form method="post" role="form" action="code.php">
         <div class="form-group">
           <input type="text" class="form-control" name="title" placeholder="Title"/>
         </div>
@@ -60,31 +61,8 @@ input[readonly] {
   </div>
 </div>
 <script>
-	$(function() {
-  $(".bcontent").wysihtml5({
-    toolbar: {
-      "image": false
-    }
-  });
-  
-  $(document).on('change', '.btn-file :file', function() {
-    var input = $(this);
-    var numFiles = input.get(0).files ? input.get(0).files.length : 1;
-    console.log(input.get(0).files);
-    var label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-    input.trigger('fileselect', [numFiles, label]);
-  });
-  
-  $('.btn-file :file').on('fileselect', function(event, numFiles, label){
-    var input = $(this).parents('.input-group').find(':text');
-    var log = numFiles > 1 ? numFiles + ' files selected' : label;
-    
-    if( input.length ) {
-      input.val(log);
-    } else {
-      if( log ){ alert(log); }
-    }
-    
-  });
-});
+  CKEDITOR.replace( 'content', {
+  height: 500,
+  filebrowserUploadUrl: "code.php"
+ });
 </script>

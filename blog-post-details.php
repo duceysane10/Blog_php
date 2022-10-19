@@ -1,51 +1,24 @@
 
 <?php 
+require_once('./admin/code.php');
 include('./includes/header.php');
+
 ?>
      <section>
           <div class="container">
-               <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse rerum fugit, sunt ut architecto, ipsam!</h2>
+               <h2><?php echo $row['post_title'];?></h2>
 
                <p class="lead">
-                    <i class="fa fa-user"></i> John Doe &nbsp;&nbsp;&nbsp;
-                    <i class="fa fa-calendar"></i> 12/06/2020 10:30 &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-user"></i> Eng Duceysane &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-calendar"></i> <?php echo $row['post_date'];?> &nbsp;&nbsp;&nbsp;
                     <i class="fa fa-eye"></i> 114
                </p>
-
-               <img src="images/other-image-fullscreen-1-1920x700.jpg" class="img-responsive" alt="">
+               <img   src="./admin/img/<?php echo $row['photo']; ?>" class="img-responsive">
+               <!-- <img src="images/other-image-fullscreen-1-1920x700.jpg" class="img-responsive" alt=""> -->
 
                <br>
-
-               <h3>Aut minus, reiciendis fuga sit consequuntur iste, amet numquam, laudantium nam repellendus ipsa vero ipsum dicta blanditiis reprehenderit.</h3>
                
-
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nam nisi, excepturi amet repellendus, commodi sunt architecto eum optio cumque recusandae. Ut necessitatibus, rem impedit enim saepe reprehenderit asperiores velit.</p>
-
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat maiores possimus deserunt nam dolores! Unde autem eius deserunt, adipisci officiis ipsum eveniet quidem fugiat nihil temporibus soluta nam animi provident corrupti quod aut ducimus ex, repellendus aperiam minima, deleniti non! Alias, id. Debitis molestiae minima eius adipisci non distinctio expedita cumque ab, accusantium molestias amet cupiditate, nobis sed! Facilis, saepe.</p>
-
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, dicta cum, earum expedita laboriosam doloribus. Aliquid, quibusdam vitae ratione fugiat labore numquam quo corporis, iure fugit incidunt nemo dolorum soluta facilis dolor. Quas quo enim consequatur commodi, quisquam, maiores at quasi quae est quis officiis alias eum omnis amet repudiandae. Nisi alias in, 
-               consequuntur? Minus fuga, modi provident laboriosam doloribus.</p>
-
-               <br>
-
-               <h4>Harum libero esse sed nostrum laboriosam dolores rerum</h4>
-
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus consequuntur fuga, provident quibusdam rerum maxime nostrum blanditiis numquam eos accusantium, quis quaerat sed voluptatem optio, nobis, officiis officia ipsum animi.</p>
-
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nam nisi, excepturi amet repellendus, commodi sunt architecto eum optio cumque recusandae. Ut necessitatibus, rem impedit enim saepe reprehenderit asperiores velit.</p>
-
-               <br>
-
-
-               <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim voluptatum sint autem, esse nihil. Eaque.</h4>
-
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat maiores possimus deserunt nam dolores! Unde autem eius deserunt, adipisci officiis ipsum eveniet quidem fugiat nihil temporibus soluta nam animi provident corrupti quod aut ducimus ex, repellendus aperiam minima, deleniti non! Alias, id. Debitis molestiae minima eius adipisci non distinctio expedita cumque ab, accusantium molestias amet cupiditate, nobis sed! Facilis, saepe.</p>
-
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, dicta cum, earum expedita laboriosam doloribus. Aliquid, quibusdam vitae ratione fugiat labore numquam quo corporis, iure fugit incidunt nemo dolorum soluta facilis dolor. Quas quo enim consequatur commodi, quisquam, maiores at quasi quae est quis officiis alias eum omnis amet repudiandae. Nisi alias in, 
-               consequuntur? Minus fuga, modi provident laboriosam doloribus.</p>
-
-               <br>
-               <br>
+               <?php echo $row['post_content'];?> 
 
                <div class="row">
                     <div class="col-md-4 col-xs-12 pull-right">

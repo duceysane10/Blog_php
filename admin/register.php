@@ -19,7 +19,6 @@ include('includes/navbar.php');
         <div class="modal-body">
             <div class="form-group">
             <input type="hidden" name="id" class="form-control" >
-            <input type="hidden" name="id" class="form-control" >
                 <label> Username </label>
                 <input type="text" name="username" class="form-control" >
             </div>
@@ -103,7 +102,7 @@ include('includes/navbar.php');
           <tr>
             <?php while($row = $resul->fetch_assoc()):?>
             <td> <?php echo $row['id'];?> </td>
-            <td><img style="max-height: 50px; max-width: 50px;" class="img-profile rounded-circle" src="./img/<?php echo $row['img']; ?>"></td>
+            <td><img style="max-height: 50px; max-width: 50px;" class="img-profile rounded-circle" src="../img/<?php echo $row['img']; ?>"></td>
             <td> <?php echo $row['name'];?> </td>
             <td> <?php echo $row['email'];?> </td>
             <td> <?php echo $row['password'];?> </td>

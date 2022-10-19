@@ -7,12 +7,23 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/sb-admin-2.js"></script>
+  <script src="ckeditor/ckeditor.js"></script>
+<script>
+// CKEDITOR.replace("article_editor");
+// CKEDITOR.on('dialogDefinition',function(e){
+//   dialogName = e.data.name;
+//   dialogDefinition= e.data.definition;
+//   console.log(dialogDefinition);
+//   if(dialogName == 'image'){
+//     dialogDefinition.removeContents('Link');
+//     dialogDefinition.removeContents('advanced');
+//     var tabContent = dialogDefinition.getContents('info');
+//     tabContent.remove('txtHSpace');
+//     tabContent.remove('txtVSpace');
+//   }
+// })
+</script>
 
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
      
 

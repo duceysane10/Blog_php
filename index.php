@@ -64,7 +64,7 @@ $resul = mysqli_query($connection,$query);
                               <div class="courses-thumb courses-thumb-secondary">
                                    <div class="courses-top">
                                         <div class="courses-image">
-                                             <img src="./admin/img/<?php echo $row['photo']; ?>" class="img-responsive" alt="">
+                                             <img  style="max-height: 200px; max-width: 300px;"  src="img/<?php echo $row['photo']; ?>" class="img-responsive" alt="">
                                         </div>
                                         <div class="courses-date">
                                              <span title="Author"><i class="fa fa-user"></i> Eng Abdifitah</span>
@@ -78,7 +78,7 @@ $resul = mysqli_query($connection,$query);
                                    </div>
 
                                    <div class="courses-info">
-                                        <a href="blog-post-details.html" class="section-btn btn btn-primary btn-block">Read More</a>
+                                        <a href="blog-post-details.php?blog=<?php echo $row['post_id'];?>" class="section-btn btn btn-primary btn-block">Read More</a>
                                    </div>
                               </div>
                          </div>
