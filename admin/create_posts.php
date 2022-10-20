@@ -4,7 +4,7 @@ include('includes/header.php');
 include('includes/navbar.php');
 
 ?>
-<script src="http://cdn.ckeditor.com/4.6.2/full-all/ckeditor.js"></script>
+<script src="ckeditor/ckeditor.js"></script>
 <style>
 .btn-file {
     position: relative;
@@ -73,8 +73,11 @@ include('includes/footer.php');
 
 ?>
 <script>
-  CKEDITOR.replace( 'conetnt1',{
-  height: 500,
-  filebrowserUploadUrl: "code.php"
- });
+ var editor=CKEDITOR.replace( 'conetnt1',{
+    height: 500,
+    extraPlugins : 'filebrowser',
+    filebrowserBrowseUrl:'browser.php?type=Images',
+    filebrowserUploadMethod:"form",
+    filebrowserUploadUrl:"code.php"
+  });
 </script>

@@ -5,7 +5,9 @@ include('includes/navbar.php');
 
 ?>
 <!-- CKEDITOR CDN LINK -->
-<script src="http://cdn.ckeditor.com/4.6.2/full-all/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script> -->
+<script src="ckeditor/ckeditor.js"></script>
+
 <style>
 .btn-file {
     position: relative;
@@ -50,7 +52,7 @@ input[readonly] {
           <label> Image </label>
           <div class="input-group">
             <span class="input-group-btn">
-              <span class="btn btn-primary btn-file">
+              <span class="btn btn-info btn-file">
                 Browse <input type="file" name="p_img" multiple value="<?php echo $file;?>">
               </span>
              </span>
@@ -67,15 +69,17 @@ input[readonly] {
     </div>
   </div>
 </div>
-
 <?php
 //footer
 include('includes/scripts.php');
 include('includes/footer.php');
 ?>
 <script>
-  CKEDITOR.replace( 'conetnt2',{
+ var editor=CKEDITOR.replace( 'conetnt2',{
   height: 500,
-  filebrowserUploadUrl: "code.php"
- });
+    extraPlugins : 'filebrowser',
+    filebrowserBrowseUrl:'browser.php?type=Images',
+    filebrowserUploadMethod:"form",
+    filebrowserUploadUrl:"code.php"
+  });
 </script>

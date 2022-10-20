@@ -72,7 +72,7 @@ if (isset($_GET['delete'])){
     header('Location: register.php');
 }
 
-// EDIT FUNTION
+// EDIT admin FUNTION
 if(isset($_GET['edit'])){
     $id = $_GET['edit'];
     $result=$connection->query("select * from users where id =$id") or die($connection->error());
@@ -123,7 +123,7 @@ if(isset($_POST['publish']))
   	$target = "../img/".basename($image);
 
         $query = "INSERT INTO  tbl_post (post_title,post_content,photo) VALUES ('$title','$content','$image ')";
-        if (move_uploaded_file($_FILES['.//img']['tmp_name'], $target)) {
+        if (move_uploaded_file($_FILES['img']['tmp_name'], $target)) {
             $query_run = mysqli_query($connection, $query);
             if($query_run)
             {
@@ -206,23 +206,23 @@ if (isset($_GET['blog'])){
 // }
 //upload ckediter image
 if(isset($_FILES['upload']['name']))
-{
- $file = $_FILES['upload']['tmp_name'];
- $file_name = $_FILES['upload']['name'];
- $file_name_array = explode(".", $file_name);
- $extension = end($file_name_array);
- $new_image_name = rand() . '.' . $extension;
- chmod('upload', 0777);//
- $allowed_extension = array("jpg", "gif", "png");
- if(in_array($extension, $allowed_extension))
- {
-  move_uploaded_file($file, '../img/' . $new_image_name);
-  $function_number = $_GET['CKEditorFuncNum'];
-  $url = '../img/' . $new_image_name;
-  $message = '';
-  echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($function_number, '$url', '$message');</script>";
- }
-}
+    {
+        $file = $_FILES['upload']['tmp_name'];
+        $file_name = $_FILES['upload']['name'];
+        $file_name_array = explode(".", $file_name);
+        $extension = end($file_name_array);
+        $new_image_name = rand() . '.' . $extension;
+        chmod('upload', 0777);//
+        $allowed_extension = array("jpg", "gif", "png");
+        if(in_array($extension, $allowed_extension))
+        {
+        move_uploaded_file($file, '../img/' . $new_image_name);
+        $function_number = $_GET['CKEditorFuncNum'];
+        $url = '../img/' . $new_image_name;
+        $message = '';
+        echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($function_number, '$url', '$message');</script>";
+        }
+    }
 ?>
 
    

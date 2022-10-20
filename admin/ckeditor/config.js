@@ -10,13 +10,13 @@ CKEDITOR.editorConfig = function( config ) {
 	config.toolbarGroups = [
 		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
 		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
-		{ name: 'insert', groups: [ 'insert', ] },
+		{ name: 'insert', groups: [ 'insert','Youtube'  ] },
 		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
 		{ name: 'forms', groups: [ 'forms' ] },
 		'/',
 		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
 		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
-		{ name: 'links', groups: [ 'links','Youtube' ] },
+		{ name: 'links', groups: [ 'links'] },
 		'/',
 		{ name: 'styles', groups: [ 'styles' ] },
 		{ name: 'colors', groups: [ 'colors' ] },
@@ -24,7 +24,10 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'others', groups: [ 'others' ] },
 		{ name: 'about', groups: [ 'about' ] }
 	];
+	config.extraPlugins = 'filebrowser';
 	config.extraPlugins = 'youtube';
-	config.extraPlugins = 'iframe';
+	config.removePlugins = 'iframe';
 	config.removeButtons = 'About';
+
 };
+		
