@@ -23,7 +23,7 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-<body class="bg-gradient-primary" style="background-image: url('img/bg2.jpg');">
+<body class="bg-gradient-primary" style="background-image: url('../img/bg2.jpg');">
 
     <div class="container">
 
@@ -37,9 +37,9 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                         <div class="col-lg-6 d-none d-lg-block"
-                          style="background-image: url('img/login.jpg');
+                          style="background-image: url('../img/login.jpg');
                                   height: 62vh"></div>
-                            <div class="col-lg-6" style="background-image: url('img/bg2.jpg');">
+                            <div class="col-lg-6" style="background-image: url('../img/bg2.jpg');">
                                 <div class="p-5">
                                  
                                     <div class="text-center">

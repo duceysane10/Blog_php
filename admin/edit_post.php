@@ -2,6 +2,8 @@
 <?php
 include('includes/header.php'); 
 include('includes/navbar.php');
+$query= "CALL `AllCategory`()";//waa procedure database ka ku sameesan
+$result= mysqli_query($connection,$query);
 
 ?>
 <!-- CKEDITOR CDN LINK -->
@@ -40,13 +42,22 @@ input[readonly] {
   <div class="row">
     <div class="col-md-12">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Create new Posts</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Edit Posts</h5>
       </div>
 
       <form method="post" role="form" action="code.php" enctype="multipart/form-data">
         <div class="form-group">
           <input type="hiden" name="p_id" value="<?php echo $p_id;?>">
           <input type="text" class="form-control" name="p_title" value="<?php echo $p_title;?>" placeholder="Title"/>
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <select name="category" aria-label="Default select example" class="form-control">
+              <option selected value="<?php echo $category?>"><?php echo $category?></option>
+              <?php while($row = $result->fetch_assoc()):?>
+              <option value="<?php echo $row['category'] ?>"><?php echo $row['category'] ?></option>
+              <?php endwhile;?>
+          </select>
         </div>
         <div class="form-group">
           <label> Image </label>

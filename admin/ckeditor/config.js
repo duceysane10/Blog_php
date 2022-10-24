@@ -6,22 +6,22 @@
 CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
-	config.uiColor = '#AADC6E';
+	//config.uiColor = '#AADC6E';
 	config.toolbarGroups = [
-		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
-		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+		{ name: 'document', groups: [ 'mode', 'document', 'doctools','Youtube'  ] },
+		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ,'Youtube' ] },
 		{ name: 'insert', groups: [ 'insert','Youtube'  ] },
-		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
-		{ name: 'forms', groups: [ 'forms' ] },
+		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing','Youtube'  ] },
+		{ name: 'forms', groups: [ 'forms' ,'Youtube' ] },
 		'/',
-		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
-		{ name: 'links', groups: [ 'links'] },
+		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup','Youtube'  ] },
+		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ,'Youtube' ] },
+		{ name: 'links', groups: [ 'links','Youtube' ] },
 		'/',
-		{ name: 'styles', groups: [ 'styles' ] },
-		{ name: 'colors', groups: [ 'colors' ] },
-		{ name: 'tools', groups: [ 'tools' ] },
-		{ name: 'others', groups: [ 'others' ] },
+		{ name: 'styles', groups: [ 'styles' ,'Youtube' ] },
+		{ name: 'colors', groups: [ 'colors' ,'Youtube' ] },
+		{ name: 'tools', groups: [ 'tools' ,'Youtube' ] },
+		{ name: 'others', groups: [ 'others' ,'Youtube' ] },
 		{ name: 'about', groups: [ 'about' ] }
 	];
 	config.extraPlugins = 'filebrowser';

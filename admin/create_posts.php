@@ -2,7 +2,8 @@
 <?php
 include('includes/header.php'); 
 include('includes/navbar.php');
-
+$query= "CALL `AllCategory`()";//waa procedure database ka ku sameesan
+$result= mysqli_query($connection,$query);
 ?>
 <script src="ckeditor/ckeditor.js"></script>
 <style>
@@ -45,6 +46,15 @@ input[readonly] {
           <input type="text" class="form-control" name="title" placeholder="Title"/>
         </div>
         <div class="form-group">
+            <label>User Type</label>
+            <select name="category" aria-label="Default select example" class="form-control">
+              <option selected >choose category</option>
+              <?php while($row = $result->fetch_assoc()):?>
+              <option value="<?php echo $row['category'] ?>"><?php echo $row['category'] ?></option>
+              <?php endwhile;?>
+          </select>
+        </div>
+        <div class="form-group">
           <label> Image </label>
           <div class="input-group">
             <span class="input-group-btn">
@@ -78,6 +88,7 @@ include('includes/footer.php');
     extraPlugins : 'filebrowser',
     filebrowserBrowseUrl:'browser.php?type=Images',
     filebrowserUploadMethod:"form",
-    filebrowserUploadUrl:"code.php"
+    filebrowserUploadUrl:"code.php",
+    
   });
 </script>

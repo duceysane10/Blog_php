@@ -1,7 +1,7 @@
 <?php 
 include('./admin/seting.php');
 include('./includes/header.php');
-$query= "SELECT * FROM `tbl_post`";
+$query= "CALL`AllPosts`()";//waa procedure database ka ku sameesan
 $resul = mysqli_query($connection,$query);
 ?>
 
